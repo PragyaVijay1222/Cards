@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            min-height: 911px;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg,#8BC6EC 0%, #9599E2 100%);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 360px;
+            height: 570px;
+            background-color: white;
+            border-radius: 20px;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            gap: 30px;
+            padding: 30px;
+        }
+        .card-inner { 
+            position: relative; 
+            width: 100%; 
+            height: 100%; 
+            transition: transform 0.6s; 
+            transform-style: preserve-3d; 
+            gap: 20px;
+        }
+        .card:hover .card-inner { 
+            transform: rotateY(180deg); 
+        }
+        .card-front, .card-back { 
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            backface-visibility: hidden; 
+        }
+        .card-front { 
+            background-color: #ffffff; 
+            color: black; 
+            transform: rotateY(0deg); 
+            gap: 20px;
+        } 
+        .card-back { 
+            background-color:  #ffffff; 
+            color: white; 
+            transform: rotateY(180deg);
+            display: flex; 
+            align-items: center; 
+            flex-direction: column;
+        }
+        .card-front img{
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+        .card-front h2{
+            font-size: 1.6rem;
+            color: #4486b3;
+            margin-bottom: 20px;
+        }
+        .card-front p{
+            font-size: 1.2rem;
+            color: #5592bb;
+        }
+        .card-back img{
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+        .card-back h2{
+            font-size: 1.6rem;
+            color: #4486b3;
+            margin-bottom: 20px;
+        }
+        .card-back p{
+            font-size: 1.2rem;
+            color: #5592bb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <img src="file.png" alt="git" /> 
+                    <h2>Check the code on Github</h2> 
+                    <p>Get the further details of the project in github with source code. Let's meet on day three.</p> 
+                </div> 
+                <div class="card-back">
+                    <img src="link.png" alt="linked" /> 
+                    <h2>Or maybe let's connect?</h2> 
+                    <p>This is going to be a fun ride for the next 30 days(and many more)</p> 
+                </div>
+        </div>
+    </div>
+</body>
+</html>
